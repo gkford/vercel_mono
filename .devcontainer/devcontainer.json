@@ -1,5 +1,5 @@
 {
-  "name": "Ubuntu Jammy with TypeScript, Node, Yarn, python, and Vercel",
+  "name": "Ubuntu Jammy with TypeScript, Node, Yarn, python and aider",
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {},

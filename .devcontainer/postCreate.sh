@@ -16,7 +16,6 @@ pip install aider-chat
 
 # Install project dependencies with Yarn
 npm install -g nodemon
-npm install -g vercel
 
 yarn install
 

@@ -40,12 +40,6 @@ const missingEnvVars = requiredEnvVars.filter(varName => !process.env[varName]);
 if (missingEnvVars.length > 0) {
     throw new Error(`Missing required environment variables: ${missingEnvVars.join(', ')}`);
 }
-if (!process.env.VERCEL_ENV) {
-    console.log("VERCEL_ENV is not present. If you are developing locally without using vercel dev, you may need to define it explicitly in .env.local (remember it is overridden when vercel env pull is run)");
-}
-else {
-    console.log(`VERCEL_ENV is set to: ${process.env.VERCEL_ENV}`);
-}
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 6060; // Default to 6060 if PORT is not set
 console.log(`PORT is set to: ${PORT}`);
 const app = (0, express_1.default)();

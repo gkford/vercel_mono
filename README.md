@@ -2,29 +2,10 @@
 
 monorepo for creating a GPT integrated single page app 
 - serving dev prototype from within codespaces.
-- Local development is with yarn and local node instead of vercel dev, because I can't figure out how to run a `vercel dev` command that specifies the project to run, and also because there are some differences between how environment variables are handled for vercel dev and vercel preview and production. 
+- I couldn't get vercel to work with node.js and a monorepo, so just using yarn dev on a linode instead
 - with api ts-node and express
 - single page frontend in react
 - auth0 for oauth
-
-### Vercel notes:
-
-- Create two vercel projects, each with a different root directory in the vercel UI - one for the frontend directory another for the api directory.
-- 
-
-- when choosing the root directory for the api directory, be sure to choose api and not api/dist - the api folder is where the vercel.json file is which will redirect vercel to look in the dist folder for the compiled typescript. It is possibly easy to override this by accident when you run vercel link - it asks where your code is - I believe this is actually setting the root directory and will override what you set when you created the new projects.
-
-- 
-
-
-### setup completion:
-For vercel cli to work, you might have to run:
-```
-echo 'export PATH="$PATH:$(yarn global bin)"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-or simply use npm to install vercel globally. Same goes for nodemon. 
 
 ### Frontend:
 Based roughly on this tutorial: 
